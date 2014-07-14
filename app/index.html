@@ -1,0 +1,146 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>karmaform</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory --><!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild --><!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 10]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
+    <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+
+<section class="shipping">
+    <form class="form form-label-inline form-stacked ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!--<span class="required-desc"><span>*</span>Required </span>-->
+                    <fieldset>
+                        <legend>Contact Info</legend>
+                        <div class="form-group">
+                            <input autofocus="autofocus" class="form-control required email" placeholder="name@example.com" type="email">
+                            <label class="in" for="order_email">Email Address</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group has-error">
+                                    <input class="form-control required" placeholder="John" type="text">
+                                    <label class="in" for="order_first_name">First Name</label>
+                                    <label for="order_first_name" class="error">This field is required.</label>
+
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <input class="form-control required" placeholder="Doe" type="text">
+                                    <label class="in" for="order_last_name">Last Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Shipping Details</legend>
+                        <div class="form-group">
+                            <input class="form-control required" maxlength="40" placeholder="John Doe" size="40" type="text">
+                            <label class="in" for="order_full_name">Full Name</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="address form-control required" data-stripe="address_line1" type="text">
+                                    <label class="in" for="order_address">Street Address 1</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="apt form-control" data-stripe="address_line2" placeholder="Apt / Suite #" type="text">
+                                    <label class="in" for="order_apt">Street Address 2 </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-3">
+                                <div class="form-group">
+                                    <input class="postal_code form-control required" data-stripe="address_zip" type="text">
+                                    <label class="in" for="order_postal_code">ZIP</label>
+                                </div>
+                            </div>
+                            <div class="col-xs-8 col-md-6">
+                                <div class="form-group">
+                                    <input class="city form-control required" data-stripe="address_city" type="text">
+                                    <label class="in" for="order_city">City</label>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-4 col-md-3">
+                                <div class="form-group region hide">
+                                    <input class="region form-control" type="text">
+                                    <label class="in" for="order_region">State</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</section>
+
+<!-- build:js scripts/vendor.js --><!-- bower:js -->
+<script src="bower_components/jquery/jquery.js"></script>
+<!-- endbower --><!-- endbuild -->
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+                function () {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = '//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/plugins.js -->
+<script src="bower_components/sass-bootstrap/js/affix.js"></script>
+<script src="bower_components/sass-bootstrap/js/alert.js"></script>
+<script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
+<script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
+<script src="bower_components/sass-bootstrap/js/modal.js"></script>
+<script src="bower_components/sass-bootstrap/js/transition.js"></script>
+<script src="bower_components/sass-bootstrap/js/button.js"></script>
+<script src="bower_components/sass-bootstrap/js/popover.js"></script>
+<script src="bower_components/sass-bootstrap/js/carousel.js"></script>
+<script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
+<script src="bower_components/sass-bootstrap/js/collapse.js"></script>
+<script src="bower_components/sass-bootstrap/js/tab.js"></script>
+<!-- endbuild -->
+</body>
+</html>

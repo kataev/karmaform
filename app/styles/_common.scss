@@ -1,4 +1,4 @@
-$karma-input-border: $brand-primary !default;
+$karma-color: $brand-primary !default;
 $karma-error-color: $brand-danger;
 
 .form-label-inline {
@@ -50,34 +50,22 @@ $karma-error-color: $brand-danger;
       top: 7px;
     }
   }
-  .input-vertical-base, input[type="text"] {
+  .form-control,
+  .select2-choice > .select2-chosen, {
+    @include transition(border 0.2s);
+    font-size: $font-size-large;
+    padding-bottom: 6px;
+    padding-top: 23px;
+    border-color: $input-border;
+    box-shadow: none;
     min-height: 56px;
   }
 
-  input {
-    &[type="text"] {
-      @include transition(border 0.2s);
-      font-size: $font-size-large;
-      padding-bottom: 6px;
-      padding-top: 23px;
-      border-color: $input-border;
-      letter-spacing: -0.02em;
-    }
-
-    &[type="email"], &[type="password"] {
-      @include transition(border 0.2s);
-      font-size: $font-size-large;
-      padding-bottom: 6px;
-      padding-top: 23px;
-      border-color: $input-border;
-      letter-spacing: -0.02em;
-      min-height: 56px;
-    }
-
+  input, textarea, select {
     &:focus {
-      border-color: $karma-input-border;
+      border-color: darken($input-border, 20%);
       + label {
-        color: $input-color;
+        color: $karma-color;
       }
     }
 
@@ -91,26 +79,6 @@ $karma-error-color: $brand-danger;
       line-height: 1.25;
     }
   }
-}
-
-textarea {
-  @include transition(border 0.2s);
-  min-height: 56px;
-  font-size: $font-size-large;
-  padding-bottom: 6px;
-  padding-top: 23px;
-  border-color: $karma-input-border;
-  letter-spacing: -0.02em;
-}
-
-textarea.required + label:after,
-select.required + label:after {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  content: "*";
-  line-height: 1.25;
 }
 
 @media (min-width: $screen-md) {

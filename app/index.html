@@ -14,6 +14,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory --><!-- build:css(.tmp) styles/main.css -->
+    <!--<link rel="stylesheet" href="bower_components/select2/select2.css">-->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild --><!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -27,6 +28,7 @@
     <form class="form form-label-inline form-stacked ">
         <div class="container">
             <h1>Karma form</h1>
+
             <div class="row">
                 <div class="col-md-6">
                     <!--<span class="required-desc"><span>*</span>Required </span>-->
@@ -95,6 +97,22 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea class="postal_code form-control required" data-stripe="address_zip" type="text"></textarea>
+                                    <label class="in" for="order_postal_code">ZIP</label>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-12">
+                                <div class="form-group">
+                                    <select class="country_code form-control" id="order_country_code">
+                                        <option selected="selected" value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                    </select> <label class="in" for="order_country_code">Country</label></div>
+                            </div>
+                        </div>
+
                     </fieldset>
                 </div>
 
@@ -142,6 +160,8 @@
 <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
 <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
 <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+<script src="bower_components/select2/select2.js"></script>
+<script src="bower_components/select2/select2_locale_ru.js"></script>
 <!-- endbuild -->
 </body>
 </html>

@@ -1,21 +1,22 @@
+$karma-input-border: $brand-primary !default;
+$karma-error-color: $brand-danger;
+
 .form-label-inline {
   .form-group {
     position: relative;
-    margin-bottom: 11px;
     @include transition(all 0.2s);
 
     &.has-error {
       .form-control {
-        border-color: $brand-danger;
-        //        color: $brand-danger;
+        border-color: $karma-error-color;
       }
       label {
         &.in {
-          color: $brand-danger;
+          color: $karma-error-color;
         }
         &.error {
-          color: $brand-danger;
-          font-size: 12px;
+          color: $karma-error-color;
+          font-size: $font-size-small;
           margin-left: 13px;
           margin-top: 5px;
         }
@@ -24,24 +25,24 @@
   }
 
   fieldset:not(:last-child) {
-    margin-bottom: 18px;
+    margin-bottom: $font-size-large;
   }
 
   legend {
     color: $gray;
     font-weight: 500;
-    font-size: 14px;
+    font-size: $font-size-base;
     margin-bottom: 10.5px;
   }
 
   label {
-    font-size: 14px;
+    font-size: $font-size-base;
     font-weight: 400;
     &.in {
       @include transition(color 0.2s);
-      font-size: 12px;
+      font-size: $font-size-small;
       font-weight: 500;
-      padding-right: 12px;
+      padding-right: $font-size-small;
       color: $gray-light;
       position: absolute;
       z-index: 1000;
@@ -56,31 +57,32 @@
   input {
     &[type="text"] {
       @include transition(border 0.2s);
-
-      font-size: 18px;
+      font-size: $font-size-large;
       padding-bottom: 6px;
       padding-top: 23px;
-      border-color: $gray-light;
+      border-color: $input-border;
       letter-spacing: -0.02em;
     }
 
     &[type="email"], &[type="password"] {
       @include transition(border 0.2s);
-
-      font-size: 18px;
+      font-size: $font-size-large;
       padding-bottom: 6px;
       padding-top: 23px;
-      border-color: $gray-light;
+      border-color: $input-border;
       letter-spacing: -0.02em;
       min-height: 56px;
     }
+
     &:focus {
-      border-color: lighten($brand-primary, 20%);
+      border-color: $karma-input-border;
       + label {
-        color: $brand-primary;
+        color: $input-color;
       }
     }
+
     &.required + label:after {
+      color: $karma-error-color;
       display: block;
       position: absolute;
       right: 0;
@@ -94,10 +96,10 @@
 textarea {
   @include transition(border 0.2s);
   min-height: 56px;
-  font-size: 18px;
+  font-size: $font-size-large;
   padding-bottom: 6px;
   padding-top: 23px;
-  border-color: $gray-light;
+  border-color: $karma-input-border;
   letter-spacing: -0.02em;
 }
 
